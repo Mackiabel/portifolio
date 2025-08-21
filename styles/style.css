@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&display=swap');
+
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #f6f6f6;
+    --cor-terciaria: #22d4fd;
+    --cor-hover: #034657;
+
+    --fonte-principal: "Krona One", sans-serif;
+    --fonte-secundaria: "Montserrat", sans-serif;
+
+}
+
+* {
+    margin: 0;
+    /* sem margem*/
+    padding: 0;
+    /*sem espaçamento interno*/
+
+}
+
+body {
+    box-sizing: border-box;
+    /*garante que os elementos filho fiquem dentro do elemento pai*/
+    /*height: 100vh;  Garantir que a página ocupe toda tela independente do dispositivo*/
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%;
+
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho__menu__link {
+    color: var(--cor-terciaria);
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--fonte-secundaria);
+    gap: 20px;
+    text-decoration: none;
+}
+
+.apresentacao {
+    justify-content: space-between;
+    display: flex;
+    /*Todos elementos dentro dessa classe iapresentarão comportamentos padronizados */
+    align-items: center;
+    /*Alinhamento dos itens ao centro*/
+    padding: 2% 15%;
+    /*primeiro valor na vertical e o segundo na horizontal*/
+    gap: 82px;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    /*Todos elementos dentro dessa classe apresentarão comportamentos padronizados */
+    flex-direction: column;
+    /*direção do espaçamento*/
+    gap: 40px;
+    /*Defina o espaçamentos entre os elementos*/
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria);
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem;
+    /*tamanho da fonte*/
+    font-family: var(--fonte-principal);
+    /*definido o estilo de fonte do texto*/
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem;
+    /*tamanho da fonte*/
+    font-family: var(--fonte-secundaria);
+    /*definido o estilo de fonte do texto*/
+}
+
+.apresentacao__links {
+    display: flex;
+    /*Todos elementos dentro dessa classe apresentarão comportamentos padronizados */
+    justify-content: space-between;
+    /*cria um espaço entre os itens de acordo com o tamanho do box*/
+    flex-direction: column;
+    /*altera a direção dos itens para a vertival*/
+    gap: 24px;
+    /*defina o valora da distancia dos itens do box*/
+    align-items: center;
+    /*alinha todos os itens do bloco para o centro*/
+}
+
+.apresentacao__links_subtitulo {
+    font-family: var(--fonte-principal);
+    /*definindo a fonte do subtitulo*/
+    font-weight: 400;
+    /*definindo o peso da fonte*/
+    font-size: 24px;
+    /*definindo o tamanho da fonte*/
+
+}
+
+.apresentacao__links__navegacao {
+    /* background-color: #22D4FD; cor de fundo */
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--cor-terciaria);
+    /*estilizando a borda com expessura e cor*/
+    width: 50%;
+    /*comprimento*/
+    text-align: center;
+    /*alinhamento dos itens da classe ao centro*/
+    border-radius: 8px;
+    /*valor de raio da borda*/
+    font-size: 1.5rem;
+    /*tamanho da fonte do texto*/
+    font-weight: 600;
+    /*peso da fonte*/
+    padding: 21.5px 0;
+    /*espaçamento interno*/
+    text-decoration: none;
+    /*retira qualquer decoração do texto*/
+    color: var(--cor-secundaria);
+    /*cor dotexto*/
+    font-family: var(--fonte-secundaria);
+    /*estilo de fonte do texto*/
+}
+
+.apresentacao__links__navegacao:hover {
+    background-color: var(--cor-hover);
+}
+
+.apresentacao__imagem {
+    width: 50%;
+}
+
+.rodape {
+    color: var(--cor-primaria);
+    /*cor da fonte*/
+    background-color: var(--cor-terciaria);
+    /*cor de fundo*/
+    font-size: 1.5rem;
+    /*tamanho da fonte*/
+    font-family: var(--fonte-secundaria);
+    /*estilo dafonte*/
+    padding: 20px;
+    /*espaçamento interno*/
+    text-align: center;
+    /*alinhamento do texto para o centro*/
+    font-weight: 400;
+    /*peso do traço da fonte*/
+
+}
+
+@media (max-width: 1300px) {
+    .cabecalho {
+        padding: 10% 10% 0% 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__imagem {
+        width: auto;
+    }
+
+}
